@@ -1,0 +1,2 @@
+Select p.PRO_NAME, c.CAT_NAME, MIN(sp.SUPP_PRICE)  from `product` as p join `category` as c on p.CAT_ID = c.CAT_ID join `supplier_pricing` as sp 
+on p.PRO_ID = sp.PRO_ID GROUP BY c.CAT_ID, c.CAT_NAME, p.PRO_NAME
